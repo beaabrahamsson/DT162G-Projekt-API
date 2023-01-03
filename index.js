@@ -11,6 +11,8 @@ mongoose.connect(mongoString);
 
 const database = mongoose.connection;
 
+const PORT = process.env.PORT || 3000;
+
 database.on('error', (error) => {
     console.log(error)
 })
@@ -25,8 +27,8 @@ app.options("*", cors());
 
 app.use(express.json());
 
-app.listen(3000, () => {
-    console.log(`Server Started at ${3000}`)
+app.listen(PORT, () => {
+    console.log(`Server Started at ${PORT}`)
 })
 
 const routes = require('./routes/routes');
