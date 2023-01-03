@@ -11,7 +11,7 @@ mongoose.connect(mongoString);
 
 const database = mongoose.connection;
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3030;
 
 database.on('error', (error) => {
     console.log(error)
