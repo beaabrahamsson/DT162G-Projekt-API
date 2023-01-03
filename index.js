@@ -27,7 +27,7 @@ app.options("*", cors());
 
 app.use(express.json());
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Server Started at ${PORT}`)
 })
 
